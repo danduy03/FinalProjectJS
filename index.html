@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LEARN JS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+
+<body onload="loadChange()">
+
+    <h1>FINAL PROJECT JS</h1>
+
+    <!-- Dự án 1 lần load trang sẽ trả ra 1 random ảnh -->
+    <img id="header_img" src="" alt="Waiting for an image."><br><br>
+
+    <!-- Dự án thêm phần tử thông qua prompt -->
+    <button onmouseover="loadFruits()">Hover to display fruits</button><br><br>
+    <button onclick="myFunction()">Add your favorite fruits</button><br>
+    <h2 id="fruits"></h2>
+
+    <!-- Dự án thao tác với "this" để hover qua sẽ trả về ảnh và thuộc alt ở phần tử trên -->
+    <div id="image">
+        Hover over an image bellow to display here.
+    </div>
+    <div>
+        <img class="preview" src="images/1.jpg" alt="Image 1" onmouseover="upDate(this)" onmouseout="unDo()">
+        <img class="preview" src="images/2.jpg" alt="Image 2" onmouseover="upDate(this)" onmouseout="unDo()">
+        <img class="preview" src="images/3.jpg" alt="Image 3" onmouseover="upDate(this)" onmouseout="unDo()">
+    </div>
+
+    <!-- Dự án tạo lightbox gallery image với thư viện của fancybox-->
+    <div class="img-gallery">
+        <a href="images/1.jpg" data-fancybox="gallery" data-caption="Image 1">
+            <img src="images/1.jpg" alt="">
+        </a>
+        <a href="images/2.jpg" data-fancybox="gallery" data-caption="Image 2">
+            <img src="images/2.jpg" alt="">
+        </a>
+        <a href="images/3.jpg" data-fancybox="gallery" data-caption="Image 3">
+            <img src="images/3.jpg" alt="">
+        </a>
+        <a href="images/4.jpg" data-fancybox="gallery" data-caption="Image 4">
+            <img src="images/4.jpg" alt="">
+        </a>
+        <a href="images/5.jpg" data-fancybox="gallery" data-caption="Image 5">
+            <img src="images/5.jpg" alt="">
+        </a>
+        <a href="images/6.jpg" data-fancybox="gallery" data-caption="Image 6">
+            <img src="images/6.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- Dự án tạo ra 3 ảnh random xuất hiện khi nhấn vào và thực hiện hover và tabindex -->
+    <button onclick="callThree()">Ấn vào ảnh ra xuất hiện random</button><br>
+
+    <div class="curent">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+
+
+</body>
+<script>
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
+
+</script>
+
+</html>
